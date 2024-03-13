@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import PrivateRoute from './private-route';
 
 // Components
-import Dashboard from '../cintainer/dashboard';
+import AppLayout from '../cintainer/app-layout';
 
 const Index = () => {
   
@@ -15,7 +15,7 @@ const Index = () => {
         <Route
           exact
           path="/"
-          element={<PrivateRoute path="/" key="/" component={Dashboard} />}
+          element={<PrivateRoute path="/" key="/" component={AppLayout} />}
         />
       </Routes>
     </>

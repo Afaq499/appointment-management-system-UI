@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import PrivateRoute from './private-route';
 
 // Components
-import Dashboard from '../cintainer/dashboard';
+import Dashboard from '../cintainer/dashboard/index.js.js';
 
 const Index = () => {
   

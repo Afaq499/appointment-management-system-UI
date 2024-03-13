@@ -76,8 +76,7 @@ const Index = () => {
       firstName,
       lastName,
       password,
-      phone,
-      companyName
+      phone
     } = data;
     dispatch(SetState({ field: 'email', value: email }));
     const address = {
@@ -93,7 +92,6 @@ const Index = () => {
       lastName,
       email,
       phone,
-      company: companyName,
       address,
       password,
     }));
@@ -130,7 +128,6 @@ const Index = () => {
           firstName: '',
           lastName: '',
           email: '',
-          companyName: '',
           password: '',
           confirmPassword: '',
           phone: '',
@@ -202,16 +199,6 @@ const Index = () => {
                       onBlur={handleBlur}
                       defaultCountry="US"
                       placeholder="000 000 0000"
-                    />
-                  </Col>
-                  <Col md={12}>
-                    <Input
-                      name='companyName'
-                      label="Company"
-                      value={values?.companyName}
-                      onChange={handleChange}
-                      onBlur={handleBlur}
-                      placeholder="Company Name"
                     />
                   </Col>
                   <Col md={6}>

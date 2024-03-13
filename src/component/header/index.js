@@ -10,7 +10,7 @@ import { LogOut } from '../../redux/slices/auth-slice';
 
 const Header = (props) => {
   const dispatch = useDispatch();
-  const { children, className,onClick } = props;
+  const { children, className, onSettingsClick } = props;
   return (
     <HeaderWrapper className={className}>
       <div className="d-flex justify-content-between align-items-center">
@@ -21,7 +21,7 @@ const Header = (props) => {
         </div>
         <div className="right-section d-flex align-items-center">
           <BsBell />
-          <BsGear onClick={onClick} />
+          <BsGear onClick={onSettingsClick} />
           <Dropdown>
             <Dropdown.Toggle className='position-relative d-flex justify-content-center header-dropdown' id="dropdown-basic">
               <img src={Avatar} alt="no-user" />
