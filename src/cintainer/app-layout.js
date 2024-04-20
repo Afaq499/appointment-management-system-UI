@@ -6,7 +6,7 @@ import { ContentWrapper } from "./style";
 
 //component
 import PageHeader from "../component/header";
-import Dashboard from "./dashboard/index.js";
+import AppointmentForm from "./dashboard/index.js";
 
 const AppLayout = () => {
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ const AppLayout = () => {
   return (
     <>
       <PageHeader onSettingsClick={() => setTabs("setting")}>
-        {/* <span onClick={() => handleTabSelection("dashboard")}>Dashboard</span> */}
+        {/* <span onClick={() => handleTabSelection("dashboard")}>AppointmentForm</span> */}
         {/* <span onClick={() => handleTabSelection("product")}>Products</span>
         <span onClick={() => handleTabSelection("keyword")}>Keywords</span>
         <span onClick={() => handleTabSelection("stores")}>Stores</span> */}
@@ -27,7 +27,7 @@ const AppLayout = () => {
       <ContentWrapper>
         {
         tab === "dashboard"
-          ? <Dashboard />
+          ? <AppointmentForm />
           : ''
         }
       </ContentWrapper>

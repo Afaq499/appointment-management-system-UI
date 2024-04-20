@@ -5,6 +5,7 @@ import storage from 'redux-persist/lib/storage';
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 
 import authSlice from '../slices/auth-slice';
+import appointment from '../slices/appointment-slice';
 
 const persistConfig = {
   key: 'root',
@@ -14,7 +15,8 @@ const persistConfig = {
 };
 
 const reducers = combineReducers({
-  auth: authSlice
+  auth: authSlice,
+  appointment
 });
 
 const rootReducer = (state, action) => {
